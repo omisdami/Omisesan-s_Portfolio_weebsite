@@ -23,7 +23,7 @@ const Projects = () => {
     const loadRepos = async () => {
       try {
         const repositories = await fetchGitHubRepos('omisdami');
-        setRepos(repositories.slice(0, 6)); // Show top 6 repositories
+        setRepos(repositories); // use all manually pinned repos
       } catch (err) {
         setError('Failed to load repositories');
         console.error('Error fetching repos:', err);
@@ -77,9 +77,6 @@ const Projects = () => {
         {error ? (
           <div className="text-center text-red-600 mb-8">
             <p>{error}</p>
-            <p className="text-sm text-gray-500 mt-2">
-              
-            </p>
           </div>
         ) : null}
 
