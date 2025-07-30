@@ -1,9 +1,9 @@
 import React from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
-import Projects from './components/Projects';
+import Projects from './components/Project';
 import Resume from './components/Resume';
-import Contact from './components/Contact';
+import Contact from './components/Contacts';
 
 function App() {
   return (
